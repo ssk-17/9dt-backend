@@ -99,6 +99,7 @@ public class DropTokenResource {
 
     private boolean checkValidNewGameRequest(CreateGameRequest request) {
         return !request.getPlayers().get(0).isEmpty() && !request.getPlayers().get(1).isEmpty() &&
-                !request.getPlayers().get(0).equals(request.getPlayers().get(1));
+                !request.getPlayers().get(0).equals(request.getPlayers().get(1))
+                && request.getRows() == 4 && request.getColumns() == 4;
     }
 }

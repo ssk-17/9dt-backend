@@ -3,8 +3,6 @@ package com._98point6.droptoken.model;
 import com.google.common.base.Preconditions;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.List;
@@ -17,12 +15,8 @@ public class CreateGameRequest {
     @Size(max = 2, min = 2)
     private List<String> players;
     @NotNull
-    @Max(4)
-    @Min(4)
     private Integer columns;
     @NotNull
-    @Max(4)
-    @Min(4)
     private Integer rows;
 
     public CreateGameRequest() {
